@@ -7,14 +7,12 @@ let nom = document.getElementById("name");
 let afficher = document.getElementById("afficher");
 let count = 3; 
 let url = ["gdg.png","annie.jpg","billy.jpg","club.jpg","joanna.jpg"];
+
 ok.addEventListener('click', () => { 
-    
     afficher.style.display = "none"
     form.style.display = "none";
     start.style.display = "flex";
-    
 });
-
 
 start.addEventListener('click', () => {
     const interval1 = setInterval(() => { 
@@ -25,28 +23,30 @@ start.addEventListener('click', () => {
             count--; 
         } else if (count == 0) { 
             start.style.fontFamily = "Christmas"; 
-            start.innerHTML = `<h2>C'est Noël !</h2>`; 
+            start.innerHTML = `<h2>C'est Noël !</h2>`;
             launchConfetti(); 
             count--; 
         } else { 
-            clearInterval(interval1); 
             start.style.display = "none"; 
-            body.style.color = "skyblue"; 
-            body.style.fontSize = "2em"; 
-            body.innerHTML = `<h1><strong>${nom.value}</strong><br>Joyeux Noël !</h1>`; 
-            body.style.textShadow = "2px 2px 4px #000000;"; 
-            launchConfetti(); 
+            container.style.fontSize = "2em"; 
+            container.innerHTML = `<div id ="message"><h1><strong>${nom.value}</strong><br>Joyeux Noël !</h1></div> `;
+            container.style.textShadow = "2px 2px 4px #000000;"; 
         } 
-        }, 800);
-    },
-)
+    }, 800);
 
-// Changement de couleur du fond aléatoirement toutes les 5 secondes
-setInterval(() => {
-    body.style.backgroundImage = "url(" + url[Math.floor(Math.random() * url.length)] + ")";	
-},5000);
     
+    setInterval(() => {
+        launchConfetti();
+        body.ap
+        body.style.backgroundImage = "url(" + url[Math.floor(Math.random() * url.length)] + ")";    
+    }, 5000);
+});
 
+// Créer et ajouter l'élément audio 
+    let audio = document.createElement("audio"); 
+    audio.src = "musique.m4a"; 
+    audio.autoplay = true; 
+    body.appendChild(audio);
 
 function launchConfetti() {
     confetti({
@@ -66,9 +66,3 @@ function launchConfetti() {
         colors: ['#ff0', '#f00', '#0f0', '#00f', '#f0f', '#0ff']
     });
 }
-
-
-
-
-
-
