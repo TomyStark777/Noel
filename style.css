@@ -136,7 +136,7 @@ input{
 }
 
 #message h1 {
-    font-size: 7vmin;
+    font-size: 5vmin;
     animation: blink 10s infinite,;
 }
 

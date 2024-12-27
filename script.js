@@ -27,7 +27,7 @@ start.addEventListener('click', () => {
             count--; 
         } else { 
             start.style.display = "none"; 
-            container.style.fontSize = "5vmin"; 
+            container.style.fontSize = "10vmin"; 
             container.innerHTML = `<div id ="message"><h1><strong>${nom.value}</strong><br>Joyeux Noël !</h1></div> `;
         } 
     }, 800);
