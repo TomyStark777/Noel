@@ -17,6 +17,7 @@ ok.addEventListener('click', () => {
 start.addEventListener('click', () => {
     const interval1 = setInterval(() => { 
         start.style.fontFamily = "Times New Roman"; 
+        container.style.fontSize = "10vmin";
         if (count > 0) { 
             start.innerHTML = `<h2>${count}</h2>`; 
             count--; 
