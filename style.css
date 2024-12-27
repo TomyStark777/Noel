@@ -100,6 +100,7 @@ h2{
     transform: translate(-50%, -50%);
     overflow-y: visible;
     pointer-events: none;
+    transition: color 1s;
 }
 
 input{
@@ -144,4 +145,6 @@ input{
         opacity: .5;
     }
 }
+
+
 
