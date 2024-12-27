@@ -37,7 +37,7 @@ start.addEventListener('click', () => {
     
     setInterval(() => {
         launchConfetti();
-        body.ap
+        container.style.color = getRandomColor(); 
         body.style.backgroundImage = "url(" + url[Math.floor(Math.random() * url.length)] + ")";    
     }, 5000);
 });
@@ -65,4 +65,13 @@ function launchConfetti() {
         origin: { x: 1, y: 1 },
         colors: ['#ff0', '#f00', '#0f0', '#00f', '#f0f', '#0ff']
     });
+}
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }

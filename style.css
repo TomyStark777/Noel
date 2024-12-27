@@ -136,29 +136,12 @@ input{
 
 #message h1 {
     font-size: 3em;
-    animation: blink 10s infinite, colorChange 20s infinite;
+    animation: blink 10s infinite,;
 }
 
 @keyframes blink {
     50% {
-        opacity: .3;
+        opacity: .5;
     }
 }
 
-@keyframes colorChange {
-    0% { 
-        color: #ff0000; 
-    }
-    25% { 
-        color: #00ff00; 
-    }
-    50% { 
-        color: #0000ff; 
-    }
-    75% { 
-        color: #ffff00; 
-    }
-    100% { 
-        color: #008000; 
-    }
-}
