@@ -146,5 +146,8 @@ input{
     }
 }
 
-
+.container{
+    transition: font-size 1s,color 1s;
+    
+}
 
