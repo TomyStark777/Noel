@@ -37,7 +37,7 @@ start.addEventListener('click', () => {
     setInterval(() => {
         launchConfetti();
         container.style.textShadow = "2px 2px 4px #000000;"; 
-        container.style.fontSize = "50vmin";
+        container.style.fontSize = "20vmin";
         container.style.color = getRandomColor(); 
         body.style.backgroundImage = "url(" + url[Math.floor(Math.random() * url.length)] + ")";    
     }, 5000);
