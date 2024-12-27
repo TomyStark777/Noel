@@ -136,7 +136,7 @@ input{
 
 #message h1 {
     font-size: 3em;
-    animation: blink 10s infinite, colorChange 5s infinite;
+    animation: blink 10s infinite, colorChange 20s infinite;
 }
 
 @keyframes blink {
@@ -159,6 +159,6 @@ input{
         color: #ffff00; 
     }
     100% { 
-        color: #ff0000; 
+        color: #008000; 
     }
 }
