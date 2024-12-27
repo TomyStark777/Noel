@@ -147,8 +147,12 @@ input{
 }
 
 @keyframes anime {
-    50% {
-        transform: scale(1.1);
+    from{
+        font-size: 8.5vmin;
+    }
+    to{
+        font-size: 9.5vmin;
+        transform: rotateX(25deg);
     }
 }
 
