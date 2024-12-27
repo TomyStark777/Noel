@@ -137,12 +137,18 @@ input{
 
 #message h1 {
     font-size: 8.5vmin;
-    animation: blink 10s infinite,;
+    animation: blink 10s infinite,anime 10s infinite;
 }
 
 @keyframes blink {
     50% {
         opacity: .5;
+    }
+}
+
+@keyframes anime {
+    50% {
+        transform: scale(1.1);
     }
 }
 
