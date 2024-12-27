@@ -17,7 +17,6 @@ ok.addEventListener('click', () => {
 start.addEventListener('click', () => {
     const interval1 = setInterval(() => { 
         start.style.fontFamily = "Times New Roman"; 
-        start.style.fontSize = "1.5em"; 
         if (count > 0) { 
             start.innerHTML = `<h2>${count}</h2>`; 
             count--; 
@@ -28,7 +27,7 @@ start.addEventListener('click', () => {
             count--; 
         } else { 
             start.style.display = "none"; 
-            container.style.fontSize = "10vmin"; 
+            container.style.fontSize = "5vmin"; 
             container.innerHTML = `<div id ="message"><h1><strong>${nom.value}</strong><br>Joyeux Noël !</h1></div> `;
         } 
     }, 800);
