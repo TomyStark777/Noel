@@ -27,7 +27,7 @@ start.addEventListener('click', () => {
             count--; 
         } else { 
             start.style.display = "none"; 
-            container.style.fontSize = "10vmin"; 
+            container.style.textShadow = "2px 2px 4px #000000;";
             container.innerHTML = `<div id ="message"><h1><strong>${nom.value}</strong><br>Joyeux Noël !</h1></div> `;
         } 
     }, 800);
@@ -35,7 +35,8 @@ start.addEventListener('click', () => {
     
     setInterval(() => {
         launchConfetti();
-        container.style.textShadow = "2px 2px 4px #000000;"; 
+        container.style.fontSize = "10vmin";
+        
         container.style.color = getRandomColor(); 
         body.style.backgroundImage = "url(" + url[Math.floor(Math.random() * url.length)] + ")";    
     }, 5000);
