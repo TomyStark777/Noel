@@ -2,12 +2,13 @@
     font-family: "Christmas";
     src: url(LastChristmas.otf);
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -30,19 +31,20 @@ body{
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
-h2{
+h2 {
     font-size: 48px;
     margin-bottom: 10px;
 }
 
 
 
-.circle{
+.circle {
     width: 35vh;
     height: 35vh;
     border-radius: 50%;
@@ -61,18 +63,18 @@ h2{
     transform: translate(-50%, -50%);
 }
 
-.circle:hover{
+.circle:hover {
     transform: scale(1.1);
 }
 
-.circle::before{
+.circle::before {
     content: "";
     display: block;
     width: 38vh;
     height: 38vh;
     border-radius: 50%;
     background-color: transparent;
-    position: absolute; 
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -85,16 +87,18 @@ h2{
     0% {
         transform: translate(-50%, -50%) scale(1);
     }
+
     50% {
         transform: translate(-50%, -50%) scale(1.1);
     }
+
     100% {
         transform: translate(-50%, -50%) scale(1);
     }
 }
 
-.container canvas{
-    position:absolute;
+.container canvas {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -103,7 +107,7 @@ h2{
     transition: color 1s;
 }
 
-input{
+input {
     margin-bottom: 10px;
     padding: 10px;
     width: 200px;
@@ -115,19 +119,19 @@ input{
 
 }
 
-#getName{
+#getName {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-#ok{
+#ok {
     margin-top: 10px;
     padding: 10px;
     width: 100px;
     border-radius: 5px;
-    background-image: linear-gradient(rgb(184, 104, 104),rgb(83, 158, 83));
+    background-image: linear-gradient(rgb(184, 104, 104), rgb(83, 158, 83));
     outline: none;
     transition: background-color 0.3s ease-in-out;
     cursor: pointer;
@@ -137,7 +141,7 @@ input{
 
 #message h1 {
     font-size: 8.5vmin;
-    animation: blink 10s infinite,anime 10s infinite;
+    animation: blink 10s infinite, rotateMove 10s infinite;
 }
 
 @keyframes blink {
@@ -148,37 +152,33 @@ input{
 
 
 #message {
-    perspective: 1000px; /* Ajoute une perspective pour améliorer l'effet 3D */
+    perspective: 1000px;
+    /* Ajoute une perspective pour améliorer l'effet 3D */
 }
-@keyframes anime {
-    
+
+@keyframes rotateMove {
     0% {
-        font-size: 8.5vmin;
-        -webkit-transform: rotateX(0deg);
-        -moz-transform: rotateX(0deg);
-        -ms-transform: rotateX(0deg);
-        transform: rotateX(0deg);
+        transform: rotate(0deg) translate(0, 0);
     }
-    
+
+    25% {
+        transform: rotate(90deg) translate(100px, 0);
+    }
+
     50% {
-        font-size: 10vmin;
-        -webkit-transform: rotateX(25deg);
-        -moz-transform: rotateX(25deg);
-        -ms-transform: rotateX(25deg);
-        transform: rotateX(25deg);
+        transform: rotate(180deg) translate(100px, 100px);
     }
-    
+
+    75% {
+        transform: rotate(270deg) translate(0, 100px);
+    }
+
     100% {
-        font-size: 8.5vmin;
-        -webkit-transform: rotateX(0deg);
-        -moz-transform: rotateX(0deg);
-        -ms-transform: rotateX(0deg);
-        transform: rotateX(0deg);
+        transform: rotate(360deg) translate(0, 0);
     }
 }
 
-.container{
-    transition: font-size 1s,color 1s;
-    
-}
+.container {
+    transition: font-size 1s, color 1s;
 
+}
